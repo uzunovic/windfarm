@@ -40,7 +40,7 @@ if __name__ == '__main__':
     max_depth_arg = args.max_depth
 
     # Classifier to train the model.
-    clf = RFC(max_depth, random_state=0)
+    clf = RFC(max_depth_arg, random_state=0)
     clf = clf.fit(train_X, train_y)
 
     # Print the coefficients of the trained classifier, and save the coefficients
