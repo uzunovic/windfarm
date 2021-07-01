@@ -37,10 +37,10 @@ if __name__ == '__main__':
     train_X = train_data.iloc[:, :-1]
 
     # Here we support a single hyperparameter, 'max_ldepth'. 
-    max_leaf_nodes = args.max_depth
+    max_depth_arg = args.max_depth
 
     # Classifier to train the model.
-    clf = RFC(max_depth=10, random_state=0)
+    clf = RFC(max_depth, random_state=0)
     clf = clf.fit(train_X, train_y)
 
     # Print the coefficients of the trained classifier, and save the coefficients
